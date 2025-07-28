@@ -3,7 +3,9 @@ import './Colors.css'
 
 const Colors = () => {
   return (
-    <div>Colors</div>
+    <div>
+      Colors
+    </div>
   )
 }
 
