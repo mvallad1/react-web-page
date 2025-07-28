@@ -9,13 +9,13 @@ import Sidebar from './Sidebar/Sidebar.jsx';
 function App() {
   const [count, setCount] = useState(0)
 
-  return <>
+  return <div>
     <Sidebar />
     <Nav />
     <Recommended />
     <Products />
 
-  </>;
+  </div>;
 }
 
 export default App

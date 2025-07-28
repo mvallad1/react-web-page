@@ -28,7 +28,7 @@ const Price = () => {
 
       <label className='sidebar-label-container'>
           <input type="radio" name='test2' />
-          <span className="checkmark"></span>$150 - $200
+          <span className="checkmark"></span>Over $150
       </label>
     
     </div>
