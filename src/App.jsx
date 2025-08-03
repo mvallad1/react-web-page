@@ -11,26 +11,30 @@ import Card from './components/Card.jsx';
 
 
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState(null)
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   //------------input filter-------------------
   const [query, setQuery] = useState("");
 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
-  }
+  };
 
-  const filteredItems = products.filter(product => product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !== -1);
+  const filteredItems = products.filter((product) => 
+    product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !== 
+    -1
+  );
 
   //------------Radio filter-------------------
   const handleChange = (event) => {
     setSelectedCategory(event.target.value);
-  }
+  };
 
   //------------Button filter-------------------
   const handleClick = (event) => {
+    console.log("Button clicked! Value:", event.target.value);
     setSelectedCategory(event.target.value);
-  }
+  };
 
   function filteredData(products, selected, query) {
     let filteredProducts = products;
@@ -71,7 +75,7 @@ function App() {
   return <div>
     <Sidebar handleChange={handleChange} />
     <Nav query={query} handleInputChange={handleInputChange}/>
-    <Recommended handleChange={handleClick} />
+    <Recommended handleClick={handleClick} />
     <Products result={result} />
 
   </div>;
